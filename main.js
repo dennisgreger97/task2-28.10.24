@@ -48,6 +48,8 @@ What's my name (1:40)
 
 console.log("\nSixth song:");
 
+console.log(`${album.tracklist[5].title} (${album.tracklist[5].duration})`);
+
 /*
 Task 2
 
@@ -58,7 +60,9 @@ Expected output:
 Joe Strummer: Guitar, Vocals
 */
 console.log("\nFirst musician:");
-
+console.log(
+  `${album.credits[0].name}: ${album.credits[0].instruments.join(", ")}`
+);
 
 /*
 Task 3
@@ -83,6 +87,10 @@ Expected output:
 
 console.log("\nTracklist:");
 
+for (let i = 0; i < album.tracklist.length; i++) {
+  console.log(`${i + 1}. ${album.tracklist[i].title}`);
+}
+
 /*
 Task 4
 
@@ -98,3 +106,9 @@ Tory Crimes: Drums
 */
 
 console.log("\nBand members:");
+
+for (let i = 0; i < album.credits.length; i++) {
+  console.log(
+    `${album.credits[i].name}: ${album.credits[i].instruments.join(", ")}`
+  );
+}
